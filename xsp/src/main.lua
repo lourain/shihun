@@ -9,35 +9,34 @@ print(height)
 function toFish()
 	module.anyWhere()--唤醒屏幕
 	module.fishList()
-
+	
 	
 end
 
---num = 0
+num = 0
 
---while(true)
---do
---	module.tapRedBag(function()
-
---		res = num%(5*60)
---		print('res:'..res)
---		if res==0 then
---			num = 0
---			toFish()
---		else
---			print('没钓鱼')
---        end
-		
---	end)
---	num = num+0.5
---	print('num-------'..num)
---	mSleep(500)
---end
 while(true)
 do
-	toFish()
-	mSleep(5*60*1000)
+	
+	res = num%(5*60)
+	print('res:'..res)
+	if res==0 then
+		num = 0
+		toFish()
+	else
+		print('没钓鱼')
+	end
+	
+	
+	num = num+1
+	print('num-------'..num)
+	mSleep(1000)
 end
+--while(true)
+--do
+--	toFish()
+--	mSleep(5*60*1000)
+--end
 
 
 

@@ -188,9 +188,9 @@ function module.fishList()
 	module.role2()
 	
 end
-
---切换角色1
-function module.role1()
+--module.tap(137,221)--角色1
+--118,352 角色2
+function module.switchRole(x,y)
 	module.tap(77,78)
 	mSleep(2000)
 	module.tap(211,707)
@@ -199,7 +199,7 @@ function module.role1()
 	mSleep(1000)
 	module.tap(1167,638)
 	mSleep(10000)
-	module.tap(137,221)--角色1
+	module.tap(x,y)--角色1
 	mSleep(1000)
 	module.tap(1797,1003)--进入游戏
 	mSleep(15000)
@@ -207,6 +207,10 @@ function module.role1()
 	mSleep(1000)
 	module.tap(1581,151)--关闭小弹窗
 	mSleep(2000)
+end
+--切换角色1
+function module.role1()
+	module.switchRole(137,221)
 	
 	toDengneng()
 	toGuiye()
@@ -215,24 +219,10 @@ end
 
 --切换角色2
 function module.role2()
-	module.tap(77,78)
-	mSleep(2000)
-	module.tap(211,707)
-	mSleep(1500)
-	module.tap(1367,203)
-	mSleep(1000)
-	module.tap(1167,638)
-	mSleep(10000)
-	module.tap(118,352)--角色2
-	mSleep(1000)
-	module.tap(1797,1003)--进入游戏
-	mSleep(15000)
-	module.tap(1896,17)--关闭大弹出窗
-	mSleep(1000)
-	module.tap(1581,151)--关闭小弹窗
-	mSleep(2000)
-	toShenmuding()
-	qiudao()
+	module.switchRole(118,352)
+	
+	toGuiye()
+	toChuyun()
 end
 
 
